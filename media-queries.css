@@ -1,0 +1,300 @@
+/*** ------------------------------
+ ** Media queries
+ * ----------
+**/
+
+
+/* laptops & tablets */
+
+@media only screen and (max-width: 1280px) {
+
+    .logo-wrapper .site-title h6 {
+        font-size: 1.3vw;
+    }
+    .logo-wrapper .site-title h2 {
+        font-size: 3.4vw;
+    }
+    
+
+}
+
+
+
+
+
+
+
+
+
+
+/* mobile portrait */
+
+@media only screen and (orientation:portrait) and (max-width : 768px) {
+
+    .content-wrapper {
+        width: 100vw;
+    }
+
+    .section-wrapper-header {
+        height: 95px;
+    }
+
+    .content-wrapper-header {
+        height: 75px;
+        padding: 0;
+        background-color: #eaecee;
+    }
+
+    .logo-wrapper {
+        justify-content: center;
+        width: 100%;
+        height: 75px;
+        z-index: 3;
+        pointer-events: none;
+    }
+    .logo-wrapper .logo {
+        top: 5px;
+        width: 200px;
+        height: 65px;
+        background-color: transparent;
+        background-image: url(./assets/logo-acme-corporation-wide.png);
+    }
+
+    .logo-wrapper .site-title {
+        display: none;
+    }
+    .nav-wrapper {
+        position: absolute;
+        flex-direction: column;
+        align-items: center;
+        top: 75px;
+        left: 0;
+        width: 100vw;
+        height: auto;
+        margin: 0;
+        padding: 20px 40px;
+        border: none;
+        background: transparent;
+        transition: .2s ease-in-out;
+        z-index: 2;
+    }
+    .nav-wrapper.open .mobile-underlay {
+        display: block;
+        position: absolute;
+        top: 100%;
+        bottom: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgb(0 0 0 / 90%);
+        z-index: -1;
+    }
+
+    .nav-wrapper.open .mobile-nav-title {
+        position: relative;
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+        border-bottom: solid 1px #6c6c6c;
+        animation: fade-in .5s ease-in-out 0s 1 both;
+    }
+    .mobile-nav-title p,
+    .footer-mobile-nav-title p  {
+        color: #546ca7;
+        text-align: center;
+        font-size: 20px;
+    }
+
+    .nav-wrapper .toggle {
+        display: block;
+        top: -55px;
+        right: 50px;
+        width: 40px;
+        height: 40px;
+    }
+    .nav-wrapper .toggle svg {
+        width: 40px;
+        height: 40px;
+    }
+    .nav-wrapper svg path {
+        opacity: 1;
+        transition: .3s linear;
+        transform: rotate(0deg) translate(0,0);
+    }
+    .nav-wrapper.open svg path {
+        fill: #da321b;
+    }
+    .nav-wrapper.open svg path#mid {
+        opacity: 0;
+    }
+    .nav-wrapper.open svg path#top {
+        transform: rotate(45deg) translate(10%,-24%);
+    }
+    .nav-wrapper.open svg path#btm {
+        transform: rotate(-45deg) translate(-41%,-8%);
+    }
+
+
+    .nav-wrapper a.nav-item {
+        display: none;
+        width: 100%;
+        margin: 10px auto;
+        padding: 14px;
+        color: #6c6c6c;
+        text-align: center;
+        border-radius: 4px;
+        background: #ebebeb;
+    }
+    .nav-wrapper a.nav-item:first-child {
+        margin-top: 50px;
+    }
+    a.nav-item::before {
+        display: none;
+    }
+    .nav-wrapper.open {
+        background: #fff;
+        transition: .2s ease-in-out;
+    }
+    .nav-wrapper.open a.nav-item {
+        display: block;
+    }
+    .nav-wrapper.open a.nav-item:first-child {
+        animation: fade-in-down .4s ease-in-out 0s 1 both; 
+    }
+    .nav-wrapper.open a.nav-item:nth-child(2) {
+        animation: fade-in-down .4s ease-in-out 0.1s 1 both; 
+    }
+    .nav-wrapper.open a.nav-item:nth-child(3) {
+        animation: fade-in-down .4s ease-in-out 0.2s 1 both; 
+    }
+    .nav-wrapper.open a.nav-item:nth-child(4) {
+        animation: fade-in-down .4s ease-in-out 0.3s 1 both; 
+    }
+    .nav-wrapper.open a.nav-item:nth-child(5) {
+        animation: fade-in-down .4s ease-in-out 0.4s 1 both; 
+    }
+    .nav-wrapper.open a.nav-item:nth-child(6) {
+        animation: fade-in-down .4s ease-in-out 0.5s 1 both; 
+    }
+    .nav-wrapper.open a.nav-item:nth-child(7) {
+        animation: fade-in-down .4s ease-in-out 0.6s 1 both; 
+    }
+
+
+
+    .content-wrapper-insights {
+        background-color: #001a7a;
+    }
+    .content-wrapper-insights h3,
+    .content-wrapper-insights p {
+        color: #fff;
+    }
+    .box-wrapper {
+        width: 100%;
+        overflow: scroll;
+    }
+    .box-wrapper .content-box {
+        position: relative;
+        display: block;
+        width: 75vw;
+        min-width: 75vw;
+        margin: 0 20px;
+    }
+
+    .box-wrapper .event-box {
+        margin: 20px;
+        background-color: #001a7a;
+    }
+    .event-box::before {
+        background-color: #c2c2c2;
+    }
+    .event-box .date {
+        background: #fff;
+    }
+    .event-box .date p,
+    .event-box .date h3 {
+        color: #008c82;
+    }
+    .event-box .event-location h5 {
+        color: #707070;
+    }
+
+    .section-wrapper-events .events-mobile-accent {
+        display: block;
+        top: 0;
+        left: 0;
+        width: 100px;
+        height: 65px;
+        margin: 0 auto;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        background-image: url(./assets/logo-graphic.png);
+    }
+
+
+
+
+    .section-wrapper-contact {
+        height: 450px;
+    }
+
+    .content-wrapper-about .inner-content-wrapper,
+    .section-wrapper-footer  {
+        width: 100%;
+    }
+
+    .footer-container {
+        height: auto;
+        background: #ccc;
+    }
+    .footer-container .left-content,
+    .footer-container .right-content {
+        display: none;
+    }
+
+    .footer-nav {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 20px;
+    }
+    .footer-nav .row-one-links {
+        display: flex;
+        justify-content: space-between;
+    }
+    .footer-mobile-nav-title {
+        position: relative;
+        display: block;
+        width: 100%;
+        margin: 30px 0 10px;
+        padding-bottom: 10px;
+        border-bottom: solid 1px #7b7b7b;
+    }
+    .footer-nav .row-one-links a.foot-nav-item {
+        width: 48%;
+        margin: 0;
+    }
+    .footer-nav a.foot-nav-item {
+        width: 100%;
+        margin: 10px auto;
+        padding: 14px;
+        color: #7b7b7b;
+        text-align: center;
+        text-decoration: none;;
+        font-weight: 700;
+        background: #fff;
+    }
+ 
+
+}
+
+
+
+
+
+
+
+
+  

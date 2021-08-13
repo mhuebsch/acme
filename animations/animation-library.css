@@ -1,0 +1,1116 @@
+/*** --------------------------------
+ ** Animation Library
+ *
+ *      ~ List of available animations (animation name in paranthesis)
+ *
+
+~ Scale Up                                      (scale-up)
+~ Spin on Y axis                                (spin-y-axis)
+~ Text focus in from blur                       (text-focus-in)
+~ Flip Up from X axis                           (flip-up-x)
+~ Grow In (from height of 0)                    (grow-in)
+~ Fade In and Grow then Fade                    (fade-n-grow-n-fade)
+~ Fade and Grow In                              (fade-n-grow-in)
+~ Fade In                                       (fade-in)
+~ Fade In with Opactiy 90%                      (fade-in-o90)
+~ Fade In with Opactiy 50%                      (fade-in-o50)
+~ Fade In with Opactiy 10%                      (fade-in-o10)
+~ Fade In Down Left Diagonal                    (fade-in-down-left)
+~ Fade In Up Left Diagonal                      (fade-in-up-left)
+~ Fade In Down Right Diagonal                   (fade-in-down-right)
+~ Fade In Up Right Diagonal                     (fade-in-up-right)
+~ Fade In from Left                             (fade-in-left)
+~ Fade In from Left Vertically Center           (fade-in-left-vert-c)
+~ Fade In from Right                            (fade-in-right)
+~ Fade In from Right Vertically Center          (fade-in-right-vert-c)
+~ Fade In Down                                  (fade-in-down)
+~ Fade In Down Vertically Center                (fade-in-down-vert-c)
+~ Fade In Up                                    (fade-in-up)
+~ Fade In Up Vertically Center                  (fade-in-up-vert-c)
+~ Fade In Up Horizontally Center                (fade-in-up-hor-c)
+~ Roll In from Left                             (roll-in-left)
+~ Lazy Rotate In Clockwise (45deg)              (rotate-in-cw-lazy)
+~ Full Rotate In Clockwise (360deg)             (rotate-in-cw-full)
+~ Slide In Down                                 (slide-in-down)
+~ Slide In Down Vertically Center               (slide-in-down-vert-c)
+~ Slide In Up                                   (slide-in-up)
+~ Slide In Up Vertically Center                 (slide-in-up-vert-c)
+~ Slide In from Left                            (slide-in-left)
+~ Slide In from Left Vertically Center          (slide-in-left-vert-c)
+~ Slide In from Right                           (slide-in-right)
+~ Slide In from Right Vertically Center         (slide-in-right-vert-c)
+~ Scale Up and In from Center                   (scale-up-in-center)
+~ Scale Down and In from Center                 (scale-down-in-center)
+~ Swing In from Above                           (swing-in-top)
+
+ * -----------
+**/
+
+
+
+
+
+
+/* Auto Grow to 80% Height */
+@keyframes auto-grow-80 {
+    from {
+        max-height: 0;
+    }
+    to {
+        max-height: 80%;
+    }
+}
+
+
+
+/* Auto Grow to 65% Height */
+@keyframes auto-grow-65 {
+    from {
+        max-height: 0;
+    }
+    to {
+        max-height: 65%;
+    }
+}
+
+
+
+
+
+
+@keyframes bounce-in {
+    0% {
+        opacity: 0;
+        transform: scale3d(0.3, 0.3, 0.3);
+    }
+
+    40% {
+        transform: scale3d(1.1, 1.1, 1.1);
+    }
+
+    80% {
+        transform: scale3d(0.97, 0.97, 0.97);
+    }
+
+    100% {
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+
+@keyframes double-bounce-in {
+    0% {
+        opacity: 0;
+        transform: scale3d(0.3, 0.3, 0.3);
+    }
+
+    20% {
+        transform: scale3d(1.1, 1.1, 1.1);
+    }
+
+    40% {
+        transform: scale3d(0.9, 0.9, 0.9);
+    }
+
+    60% {
+        opacity: 1;
+        transform: scale3d(1.03, 1.03, 1.03);
+    }
+
+    80% {
+        transform: scale3d(0.97, 0.97, 0.97);
+    }
+
+    100% {
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+
+
+
+
+
+
+@keyframes bg-pos-change {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+
+/* Left to right */
+@keyframes left-to-right {
+    0%, 100% {
+        left: -30vw;
+        opacity: 1;
+    }
+    97% {
+        left: 150vw;
+        opacity: 1;
+    }
+    98% {
+        left: 150vw;
+        opacity: 0;
+    }
+    99% {
+        left: -30vw;
+        opacity: 0;
+    }
+}
+
+
+/* Right to left */
+@keyframes right-to-left {
+    0%, 100% {
+        right: -30vw;
+        opacity: 1;
+    }
+    97% {
+        right: 150vw;
+        opacity: 1;
+    }
+    98% {
+        right: 150vw;
+        opacity: 0;
+    }
+    99% {
+        right: -30vw;
+        opacity: 0;
+    }
+}
+
+
+
+
+/* Top to bottom */
+@keyframes top-to-btm {
+    0%, 100% {
+        top: -60vh;
+        opacity: 1;
+    }
+    97% {
+        top: 150vh;
+        opacity: 1;
+    }
+    98% {
+        top: 150vh;
+        opacity: 0;
+    }
+    99% {
+        top: -60vh;
+        opacity: 0;
+    }
+}
+
+
+
+
+
+/* Bottom to top */
+@keyframes btm-to-top {
+    0%, 100% {
+        bottom: -60vh;
+        opacity: 1;
+    }
+    97% {
+        bottom: 150vh;
+        opacity: 1;
+    }
+    98% {
+        bottom: 150vh;
+        opacity: 0;
+    }
+    99% {
+        bottom: -60vh;
+        opacity: 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/** ----------------------
+ * Drift
+**/
+@keyframes drift {
+    0% {
+        transform: scale(1) translateX(-.4vw);
+    }
+    50% {
+        transform: scale(1.03) translateX(.4vw);
+    }
+    80% {
+        transform: translateX(0vw);
+    }
+    100% {
+        transform: scale(1) translateX(-.4vw);
+    }
+}
+
+
+
+
+/** ----------------------
+ * Zoom out, then in.
+**/
+@keyframes zoom-out-in {
+    0% {
+        transform: scale(1.2);
+    }
+    50% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.2);
+    }
+}
+
+
+
+
+
+/** ----------------------
+ * Scale Up
+**/
+@keyframes scale-up {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+
+
+
+
+/** ----------------------
+ * Spin on Y axis
+**/
+@keyframes spin-y-axis {
+    from {
+        transform: rotateY(0deg);
+    }
+    
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+
+
+
+
+
+/** ----------------------
+ * Text focus in from blur
+**/
+@keyframes text-focus-in {
+    0% {
+        filter: blur(1vw);
+        opacity: 0;
+    }
+    
+    100% {
+        filter: blur(0vw);
+        opacity: 1;
+    }
+}
+
+.text-focus-in {
+    animation: text-focus-in .7s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0s both;
+}
+
+
+
+
+
+
+/** ----------------------
+ * Flip Up from X Axis (starts off like a pancake)
+**/
+@keyframes flip-up-x {
+  from {
+    transform: perspective(10vw) rotateX(90deg) translate(0,-50%);
+    opacity: 0;
+  }
+  60% {
+    opacity: .5;
+  }
+  to {
+    transform: perspective(40vw) rotateX(0deg) translate(0,-50%);
+    opacity: 1;
+  }
+}
+
+.flip-up-x {
+    backface-visibility: visible !important;
+    animation-name: flip-up-x .7s 1 ease-in;
+}
+
+
+
+
+
+
+/** ----------------------
+ * Grow In 
+ *
+ *  ~ The ending height may need to change depending on the use-case.
+ *
+**/
+@keyframes grow-in {
+  from {
+    opacity: 0;
+    height: 0;
+  }
+
+  to {
+    opacity: 1;
+    height: 4vw;
+  }
+}
+
+
+
+
+
+/** ----------------------
+ * Fade In and Grow then Fade
+**/
+@keyframes fade-n-grow-n-fade {
+    0% {
+        transform: scale(.5);
+        opacity: 0;
+    }
+    70% {
+        transform: scale(1.5);
+        opacity: .8;
+    }
+    100% {
+        transform: scale(.9);
+        opacity: .4;
+    }
+}
+
+
+
+
+
+/** ----------------------
+ * Fade and Grow In
+**/
+@keyframes fade-n-grow-in {
+    0% {
+        transform: scale(.5);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: .6;
+    }
+}
+
+
+
+
+
+/** ----------------------
+ * Fade In
+**/
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+/** ----------------------
+ * Fade In to opacity of 90%
+**/
+@keyframes fade-in-o90 {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: .9;
+    }
+}
+
+
+
+
+
+
+/** ----------------------
+ * Fade In to opacity of 50%
+**/
+@keyframes fade-in-o50 {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: .5;
+    }
+}
+
+
+
+
+
+/** ----------------------
+ * Fade In to opacity of 40%
+**/
+@keyframes fade-in-o40 {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: .4;
+    }
+}
+
+
+
+
+
+
+/** ----------------------
+ * Fade In to opacity of 10%
+**/
+@keyframes fade-in-o10 {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: .1;
+    }
+}
+
+
+
+
+
+
+/** ----------------------
+ * Fade In Down Left
+**/
+@keyframes fade-in-down-left {
+    from {
+        transform: translate(30%, -100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+/** ----------------------
+ * Fade In Down Right
+**/
+@keyframes fade-in-down-right {
+    from {
+        transform: translate(-30%, -100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+/** ----------------------
+ *  Fade In Up Left
+**/
+@keyframes fade-in-up-left {
+    from {
+        transform: translate(30%, 100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+/** ----------------------
+ *  Fade In Up Right
+**/
+@keyframes fade-in-up-right {
+    from {
+        transform: translate(-30%, 100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+/** ----------------------
+ *  Fade In Left
+**/
+@keyframes fade-in-left {
+    from {
+        transform: translate(-100%, 0);
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+/** ----------------------
+ *  Fade In Left with Vertical Centering
+**/
+@keyframes fade-in-left-vert-c {
+    from {
+        transform: translate(-100%, -50%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(0, -50%);
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+/** ----------------------
+ *  Fade In Down
+**/
+@keyframes fade-in-down {
+    from {
+        transform: translate(0, -100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+/** ----------------------
+ *  Fade In Down with Vertical Centering
+**/
+@keyframes fade-in-down-vert-c {
+    from {
+        transform: translate(0, -100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(0, -50%);
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+/** ----------------------
+ *  Fade In Right
+**/
+@keyframes fade-in-right {
+    from {
+        transform: translate(100%, 0);
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+/** ----------------------
+ *  Fade In Right with Vertical Centering
+**/
+@keyframes fade-in-right-vert-c {
+    from {
+        transform: translate(100%, -50%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(0, -50%);
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+/** ----------------------
+ *  Fade In Up
+**/
+@keyframes fade-in-up {
+    from {
+        transform: translate(0, 100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+/** ----------------------
+ *  Fade In Up with Vertical Centering
+**/
+@keyframes fade-in-up-vert-c {
+    from {
+        transform: translate(0, 100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(0, -50%);
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+/** ----------------------
+ *  Fade In Up with Horizontal Centering
+**/
+@keyframes fade-in-up-hor-c {
+    from {
+        transform: translate(-50%, 100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(-50%, 0%);
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+/** ----------------------
+ *  Roll in From Left
+**/
+@keyframes roll-in-left {
+    from {
+        transform: translate(-100%, 0) rotate3d(0, 0, 1, -120deg);
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+/** ----------------------
+ *  Lazy Rotate in Clockwise (spin in)
+**/
+@keyframes rotate-in-cw-lazy {
+    0% {
+        transform: rotate(-45deg);
+        opacity: 0;
+    }
+    
+    100% {
+        transform: rotate(0);
+        opacity: 1;
+    }
+}
+
+.rotate-in-cw-lazy {
+    animation: rotate-in-cw-lazy .6s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0s both;
+}
+
+
+
+
+
+
+/** ----------------------
+ *  Full Rotate in Clockwise (spin in)
+**/
+@keyframes rotate-in-cw-full {
+    0% {
+        transform: rotate(-360deg);
+        opacity: 0;
+    }
+    
+    100% {
+        transform: rotate(0);
+        opacity: 1;
+    }
+}
+
+.rotate-in-cw-full {
+    animation: rotate-in-cw-full .6s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0s both;
+}
+
+
+
+
+
+
+/** ----------------------
+ *  Slide in Up
+**/
+@keyframes slide-in-up {
+    0% {
+        transform: translateY(1000px);
+    }
+    
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.slide-in-up {
+    animation: slide-in-up .5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0s both;
+}
+
+
+
+
+
+
+/** ----------------------
+ *  Slide in Up with Vertical Centering
+**/
+@keyframes slide-in-up-vert-c {
+    0% {
+        transform: translateY(1000px);
+        opacity: 0;
+    }
+    
+    100% {
+        transform: translateY(-50%);
+        opacity: 1;
+    }
+}
+
+.slide-in-up-vert-c {
+    animation: slide-in-up-vert-c .5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0s both;
+}
+
+
+
+
+
+
+/** ----------------------
+ *  Slide in Left
+**/
+@keyframes slide-in-left {
+    0% {
+        transform: translateX(-1000px);
+    }
+    
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.slide-in-left {
+    animation: slide-in-left0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+
+
+
+
+
+/** ----------------------
+ *  Slide in Left with Vertical Centering
+**/
+@keyframes slide-in-left-vert-c {
+    0% {
+        transform: translate(-1000px, -50%);
+    }
+    
+    100% {
+        transform: translate(0, -50%);
+    }
+}
+
+.slide-in-left-vert-c {
+    animation: slide-in-left-vert-c0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+
+
+
+
+
+/** ----------------------
+ *  Slide in Right
+**/
+@keyframes slide-in-right {
+    0% {
+        transform: translateX(1000px);
+    }
+    
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.slide-in-right {
+    animation: slide-in-right .5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0s both;
+}
+
+
+
+
+
+
+/** ----------------------
+ *  Slide in Right with Vertical Centering
+**/
+@keyframes slide-in-right-vert-c {
+    0% {
+        transform: translate(1000px, -50%);
+    }
+    
+    100% {
+        transform: translate(0, -50%);
+    }
+}
+
+.slide-in-right-vert-c {
+    animation: slide-in-right-vert-c .5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0s both;
+}
+
+
+
+
+
+
+/** ----------------------
+ *  Slide in Down
+**/
+@keyframes slide-in-down {
+    0% {
+        transform: translateY(-1000px);
+    }
+    
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.slide-in-down {
+    animation: slide-in-down .5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0s both;
+}
+
+
+
+
+
+
+/** ----------------------
+ *  Slide in Down with Vertical Centering
+**/
+@keyframes slide-in-down-vert-c {
+    0% {
+        transform: translateY(-1000px);
+        opacity: 0;
+    }
+    
+    100% {
+        transform: translateY(-50%);
+        opacity: 1;
+    }
+}
+
+.slide-in-down-vert-c {
+    animation: slide-in-down-vert-c .5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0s both;
+}
+
+
+
+
+
+
+/** ----------------------
+ * Scale Up and In from Center
+**/
+@keyframes scale-up-in-center {
+    from {
+        transform: scale(.01);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+/** ----------------------
+ * Scale Down and In from Center
+**/
+@keyframes scale-down-in-center {
+    from {
+        transform: scale(5);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+/** ----------------------
+ * Zoom In Down
+**/
+@keyframes zoomInDown {
+  from {
+    opacity: 0;
+    transform: scale(0.1) translate(0, -1000px);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+
+  60% {
+    opacity: 1;
+    transform: scale(0.475) translate(0, 60px);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+  }
+  
+  100% {
+    opacity: 1;
+    transform: scale(1) translate(0, 0);
+  }
+}
+
+
+
+
+
+
+/** ----------------------
+ *  Swing in from Top
+**/
+@keyframes swing-in-top {
+    0% {
+        transform: rotateX(-100deg);
+        transform-origin: top;
+        opacity: 0;
+    }
+    
+    100% {
+        transform: rotateX(0deg);
+        transform-origin: top;
+        opacity: 1;
+    }
+}
+
+.swing-in-top {
+    animation: swing-in-top .5s cubic-bezier(0.175, 0.885, 0.320, 1.275) 0s both;
+}
+
+
